@@ -1,0 +1,109 @@
+$main-coloer: #d2dbee;
+
+// #region ローダー関連スタイル
+// 背景
+.loader {
+  // bodyのサイズに合わせる
+  position: absolute;
+  min-height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  // 背景色
+  background-color: rgba($color: #000000, $alpha: 0.5);
+}
+
+// 中身
+.loaderInner {
+  // スクロールしても固定
+  position: fixed;
+  // 上下左右中央寄せ
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  // ボールの位置調整
+  .ball-pulse div {
+    margin: 10px;
+  }
+  // 文字のスタイル
+  .loadingExcuse {
+    color: white;
+    margin: 20px;
+    font-size: large;
+  }
+}
+// #endregion
+
+// 全体色
+body {
+  background-color: $main-coloer;
+}
+
+// 要素非表示
+.hidden {
+  display: none;
+}
+
+// ボタン
+// Neumorphism にしてみた
+button {
+  width: 100px;
+  margin: 5px;
+  background: linear-gradient(145deg, #f7ffff, #adb5c4);
+  border-radius: 5px;
+  box-shadow: 8.41px 8.41px 15px #c2cbdc, -8.41px -8.41px 15px #e2ebff;
+  outline: none;
+
+  &:disabled {
+    cursor: default;
+    background: linear-gradient(145deg, #f9ffff, #abb2c1);
+    box-shadow: inset 9.91px 9.91px 15px #bfc7d9, inset -9.91px -9.91px 15px #e5efff;
+  }
+}
+
+// タイトル
+.title {
+  text-align: center;
+  padding: 10px;
+}
+
+// メインコンテンツ
+section {
+  width: 600px;
+  margin: 0 auto;
+}
+
+// カメラ
+.reader {
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+// Flexboxコンテナ
+.flexContainer {
+  display: flex;
+}
+
+// 結果領域
+.result {
+  border: 1px solid gray;
+  width: 250px;
+  box-sizing: border-box;
+  p {
+    word-break: break-all;
+    text-align: center;
+  }
+  .note {
+    color: gray;
+    padding: 10px;
+  }
+}
+
+.camera,
+.picture,
+.result {
+  margin: 10px;
+}

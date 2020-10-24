@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="" />
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <link rel="shortcut icon" href="" />
+        <!--Import CSS file-->
+        <link rel="stylesheet" type="text/css" href="./QrReader.css" />
+        <!--Import jQuery 2019/3/25-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- jsqr from cdn -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/jsqr@1.1.1/dist/jsQR.min.js"
+            integrity="sha384-i4Tuh5Z0ns/3M0289mSougur8irvedWPBlwOcJ7ob5AK/rvN5tjkwzu7P1k1dThG"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <h1>図書管理システム</h1>
+
+        <section>
+            <div class="flexContainer reader">
+                <!-- カメラ映像 -->
+                <video class="camera" id="camera" muted></video>
+                <!-- 処理用（画面上は非表示） -->
+                <canvas class="picture" id="picture"></canvas>
+                <!-- 読み取り結果 -->
+                <div class="result" id="result">
+                    <div class="note">※ここに読み取り結果が表示されます※</div>
+                </div>
+            </div>
+
+            <div class="flexContainer formCont">
+                <div class="flexContainer colomun">
+                    <div>
+                        <label for="rental">貸出
+                        <input type="radio" name="purpose" id="rental" value="0" />
+                        </label>
+                    </div>
+                    <div>
+                        <label for="return">返却</label>
+                        <input type="radio" name="purpose" id="return" value="1" />
+                    </div>
+                    <input type="button" id="changeRentStats" value="送信" />
+                </div>
+            </div>
+        </section>
+        <!--Import JS file-->
+        <script type="text/javascript" src="./QrReader.js"></script>
+    </body>
+</html>

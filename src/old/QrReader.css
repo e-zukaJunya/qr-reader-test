@@ -1,0 +1,48 @@
+h1 {
+    text-align: center;
+}
+
+.flexContainer {
+    display: flex;
+}
+
+section {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.reader {
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.camera,
+.picture,
+.result {
+    width: 250px;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.picture {
+    display: none;
+}
+
+.result {
+    border: 1px solid gray;
+    word-break: break-all;
+}
+
+.colomun {
+    flex-direction: column;
+}
+
+.note {
+    color: gray;
+    padding: 10px;
+}
+
+.formCont {
+    justify-content: flex-end;
+    margin: 10px;
+}
