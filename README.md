@@ -1,54 +1,42 @@
-# Fundamental Webpack Env
+# QR code reader
 
-めちゃくちゃしょぼい Web アプリを Pure JS で作成するときに使う開発環境テンプレート。
+It's a simple QR code reader by using [jsQR](https://github.com/cozmo/jsQR).
 
-ちょっとした検証なんかにも。
 
-状態管理や画面遷移が増えたら潔くフレームワークを使うこと。
 
 ## Features
 
-- ES6 以降の文法書き放題！SCSS もかけちゃう！IE とかでも動くようにバベります。
-- build 生成物は'dist'以下に出力。css と js は別になる。
-- async/await 使いたかったら下記の import 書いてね。
+- 
 
-```js
-import "core-js/stable";
-import "regenerator-runtime/runtime";
-```
 
-- CSS フレームワークは、loaders.css と ress のみ入れてる。
 
 ## Requirement
 
 - Node.js >= 10.x
 - npm >= 6.x
 
+
+
 ## Usage
 
 ```bash
-#ライブラリのインストール
+# install node_modules
 yarn install
 
-# ローカル実行
+# run locally
 yarn start
 
-# 開発用ビルド
+# development build
 yarn run build:d
 
-# 製品用（圧縮）ビルド
+# production build
 yarn run build:p
 
 ```
 
-## TODO
 
-fibers
 
 ## Author
 
 Junya Iizuka
 
-## License
-
-特になし
