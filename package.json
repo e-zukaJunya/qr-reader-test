@@ -1,8 +1,8 @@
 {
-  "name": "pure-js-app-20200405",
+  "name": "qr-reader-1",
   "version": "1.0.0",
   "description": "",
-  "main": "root.js",
+  "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=dev webpack serve",
     "build:d": "cross-env NODE_ENV=dev webpack --mode=development",
